@@ -1,0 +1,180 @@
+body {
+    background-color: #383735;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Necesario para el posicionamiento del menú */
+}
+
+.logo h1 {
+    font-family: 'Times New Roman', serif; /* Estilo de fuente similar */
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+    width: 100%;
+}
+
+nav .nav-links li {
+    margin-left: 30px;
+}
+
+nav .nav-links a {
+    color: white; /* Color del texto normal */
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    transition: color 0.3s ease; /* Suaviza la transición de color */
+}
+
+/* Efecto Hover */
+nav .nav-links a:hover {
+    color: #FFD700; /* Color dorado al pasar el mouse */
+}
+
+/* Estilos para el menú móvil */
+.menu-toggle {
+    display: none; /* Oculta el botón por defecto */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.footer {
+    background-color: #383735;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer .fparrafo {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.footer a.redes {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer .iconosredes {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer .iconosredes:hover {
+    transform: scale(1.2); /* Agranda el icono cuando se pasa el mouse */
+}
+
+
+.carousel {
+    position: relative;
+    width: 80%; /* El carrusel ocupará el 80% del ancho de la pantalla */
+    height: 80vh; /* Altura del carrusel, puedes ajustarlo según tus necesidades */
+    margin: 0 auto; /* Centra el carrusel */
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centra las imágenes verticalmente */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Ajusta el ancho total al 100% del carrusel */
+    height: 100%;
+}
+
+.carousel-images img {
+    min-width: 100%; /* Cada imagen ocupa el 100% del carrusel */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Media Queries para hacer el menú responsivo */
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none; /* Oculta el menú por defecto en móviles */
+        flex-direction: column; /* Cambia a columna */
+        position: absolute; /* Posiciona el menú */
+        top: 60px; /* Alinea con el header */
+        right: 0; /* Alinea a la derecha */
+        background-color: #383735; /* Color de fondo del menú */
+        width: 100%; /* Ancho completo */
+        z-index: 1; /* Asegúrate de que el menú esté encima de otros elementos */
+    }
+
+    nav .nav-links li {
+        margin: 10px 0; /* Espaciado vertical */
+        text-align: center; /* Centra los enlaces */
+    }
+
+    .menu-toggle {
+        display: flex; /* Muestra el botón en móviles */
+    }
+
+    .nav-links.active {
+        display: flex; /* Muestra el menú al hacer clic */
+    }
+}
