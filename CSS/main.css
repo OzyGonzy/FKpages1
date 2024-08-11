@@ -150,6 +150,70 @@ button.prev:hover, button.next:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Ajusta según sea necesario */
+    background-color: #3f3f3f;
+}
+
+.form-container {
+    background-color: #4f4f4f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-container h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3f3f3f;
+    color: #fff;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    background-color: #575757;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4f4f4f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #f0f0f0;
+}
 
 
 /* Media Queries para hacer el menú responsivo */
