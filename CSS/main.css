@@ -155,7 +155,6 @@ button.prev:hover, button.next:hover {
     justify-content: center;
     align-items: center;
     min-height: 70vh; /* Ajusta según sea necesario */
-    background-color: #3f3f3f;
 }
 
 .form-container {
