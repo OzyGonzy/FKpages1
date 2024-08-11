@@ -14,6 +14,11 @@ header {
     position: relative; /* Necesario para el posicionamiento del menú */
 }
 
+a {
+    text-decoration: none; /* Quita el subrayado de todos los enlaces en la página */
+    color: inherit; /* Hereda el color del texto del contenedor */
+}
+
 .logo h1 {
     font-family: 'Times New Roman', serif; /* Estilo de fuente similar */
     margin: 0;
